@@ -25,12 +25,15 @@ class Acc
 			cout<<"\nBalance in acc : "<<bal;
 			cout<<"\nEnter amount to withdraw : ";
 			cin>>y;
-			bal=bal-y;
+			if(bal>y || bal==y)
+				bal=bal-y;
+			else
+				cout<<"\nInsufficient funds\n";
 		}
 		void disp()
 		{
 			cout<<"\nName : "<<name;
-			cout<<"\nBalance in acc : "<<bal;
+			cout<<"\nBalance in acc : "<<bal<<endl;
 		}
 };
 
