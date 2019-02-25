@@ -4,7 +4,7 @@ using namespace std;
 class STUDENT
 {
 	public:
-		int USN,x,y;
+		int USN,x,y,a[15];
 		float av,m1,m2,m3;
 		char name[20];
 		void getdata()
@@ -19,33 +19,32 @@ class STUDENT
 		}
 		void aver()
 		{
-			int a[3];
-			a[0]=m1;a[1]=m2;a[2]=m3;
-			if(a[0]>a[1]&&a[0]>a[2])
+			float a[5],f,s,t;
+			a[0]=m1;a[1]=m2;a[2]=m3;			
+			f=s=t=0.0;
+			for(int i=0;i<3;i++)
 			{
-				x=a[0];
-				a[0]=a[1];a[1]=a[2];
+				if(a[i]>f)
+				{	
+					t=s;
+					s=f;
+					f=a[i];
+				}
+				else if(a[i]>s)
+				{
+					t=s;
+					s=a[i];
+				}
+				else if(a[i]>t)
+					t=a[i];
 			}
-			else if(a[1]>a[0] && a[1]>a[2])
-			{
-				x=a[1];
-				a[1]=a[2];
-			}
-			else if(a[2]>a[0] && a[2]>a[1])
-			{
-				x=a[2];
-			}
-			if(a[0]>a[1])
-				y=a[0];
-			else
-				y=a[1];
-			av=(x+y)/2;
-		}
+			av=(f+s)/2;
+	 	}
 		void disp()
 		{
 			cout<<"\n\nUSN : "<<USN;
 			cout<<"\nName : "<<name;
-			cout<<"\nAverage Marks : "<<av;
+			cout<<"\nAverage Marks : "<<av<<endl;
 		}
 };
 
@@ -60,7 +59,6 @@ int main()
 		obj[i].getdata();
 		obj[i].aver();
 	}
-
 	for(int i=0;i<n;i++)
 		obj[i].disp();
 }
