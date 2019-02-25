@@ -31,6 +31,7 @@ int main()
 	{
 		EMP[i].getdata();
 	}	
+	cout<<"\n\nEmployee Details are :- \n\n";
 	for(int i=0;i<n;i++)
 	{
 		EMP[i].disp();
