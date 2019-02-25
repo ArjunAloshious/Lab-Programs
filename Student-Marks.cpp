@@ -45,7 +45,7 @@ class STUDENT
 		{
 			cout<<"\n\nUSN : "<<USN;
 			cout<<"\nName : "<<name;
-			cout<<"\nAverage : "<<av;
+			cout<<"\nAverage Marks : "<<av;
 		}
 };
 
