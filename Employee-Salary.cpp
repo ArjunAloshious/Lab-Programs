@@ -36,15 +36,9 @@ int main()
 	cout<<"Enter no. of employees : ";
 	cin>>N;
 	for(int i=0;i<N;i++)
-	{
 		EMP[i].getdata();
-	}	
 	for(int i=0;i<N;i++)
-	{
 		EMP[i].comp();
-	}	
 	for(int i=0;i<N;i++)
-	{
 		EMP[i].disp();
-	}
 }
