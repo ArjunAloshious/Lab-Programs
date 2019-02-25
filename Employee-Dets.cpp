@@ -8,7 +8,6 @@ class EMPLOYEE
 		char EMPNAME[20];
 		void getdata()
 		{
-			
 			cout<<"\nEnter name : ";
 			cin>>EMPNAME;
 			cout<<"Enter code : ";
